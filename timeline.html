@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--<link href="timeline.css" rel="stylesheet"/>-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!--
+If you need more space between the item
+
+=> add height to .bar
+=> ajust your margin-bottom on .item-time-container
+-->
+
+<script>
+
+    // Ajust the last item bar height
+    window.onload = () =>{
+        const itemsTimeline = document.getElementsByClassName("bar");
+        console.log(itemsTimeline[itemsTimeline.length - 1].style.height = '100px');
+    }
+
+
+</script>
+
+<style>
+
+    /* cell content */
+    .item-time-container {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 40px;
+    }
+
+    /* circle */
+    .dot {
+        margin-left:10px;
+        margin-right: 20px;
+        height: 45px;
+        width: 45px;
+        background-color: mediumblue;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    /* bar */
+    .bar {
+        content:'';
+        height:155px;
+        width: 15px;
+        background: mediumblue;
+        margin-left: 15px;
+    }
+
+    .bar:first-child {
+        margin-top:-10px;
+    }
+
+
+    .date {
+        margin-top: 10px;
+        padding: 3px;
+
+    }
+
+    .items-timeline-container {
+        margin-top: 25px;
+
+    }
+
+    .message-timeline {
+        background: lightgrey;
+        padding: 10px;
+        border-radius: 3px;
+        /*margin-top: 10px;*/
+        flex: 0 0 10em;
+    }
+
+    .arrows {
+        margin-top: 10px;
+        margin-right: 15px;
+        margin-left: -5px;
+        flex: 0 0 1em;
+    }
+
+
+
+
+    @media (min-width:768px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+        .message-timeline {
+            background: lightgrey;
+            padding: 10px;
+            border-radius: 3px;
+            /*margin-top: 10px;*/
+            flex: 0 0 32em;
+        }
+    }
+
+    @media (min-width:1281px) { /* hi-res laptops and desktops */
+        .message-timeline {
+            background: lightgrey;
+            padding: 10px;
+            border-radius: 3px;
+            /*margin-top: 10px;*/
+            flex: 0 0 85em;
+        }
+    }
+
+
+
+</style>
+
+
+<div class="items-timeline-container">
+    <div class="item-time-container">
+        <div class="date">08 11 20</div>
+        <div class="dot">
+            <div class="bar">
+            </div>
+        </div>
+        <div class="arrows">
+            <i class="fa fa-arrow-right"></i>
+        </div>
+        <div class="message-timeline"> NDRF 500 - AI Fail with correlatioNid : D7DE8E7 and result is FAIL</div>
+    </div>
+    <div class="item-time-container">
+        <div class="date"> 08 11 20</div>
+        <div class="dot">
+            <div class="bar">
+            </div>
+        </div>
+        <div class="arrows">
+            <i class="fa fa-arrows-h"></i>
+        </div>
+        <div class="message-timeline"> ici container</div>
+    </div>
+    <div class="item-time-container">
+        <div class="date"> 08 11 20</div>
+        <div class="dot">
+            <div class="bar">
+            </div>
+        </div>
+        <div class="arrows">
+            <i class="fa fa-arrow-right"></i>
+        </div>
+        <div class="message-timeline"> ici container</div>
+    </div>
+</div>
+
+</body>
+</html>
